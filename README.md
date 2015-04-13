@@ -20,7 +20,11 @@ Bugs are
 won't work. if you switch your window and you come back, the text appears in a weird way. You can now write dytext anywhere you want as long you don't write "dytext" out of an id, it should still work.
 
 
-##Last Update## : Class has been added, you can use the attribute class. Example here using a class and a mouseover at the same time. <div class="mouseoverdytext600">{Hey mouse over me}  It should work !</div>
+Last Update : Class has been added, you can use the attribute class. Example here using a class and a mouseover at the same time. <div class="mouseoverdytext600">{Hey mouse over me}  It should work !</div>
+A minor error has been corrected. If you didnt have create a mouseoverdytext, the script was not working. 
+I added those lines if (jayi!=null) {..}
+        and        if (jay!=null) {...}
+        jayi jay are the way to know if my events dytextSomethingNumber or mouseoverdytextSomethingNumber exist or not.
 Next Update## :
 
 
