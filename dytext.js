@@ -1,3 +1,4 @@
+
 var jay=document.body.innerHTML.match(/(?:["'])dytext[\w-]*(?=('|")(>|\s))/gi);
 var jayi=document.body.innerHTML.match(/(?:["'])mouseoverdytext[\w-]*(?=["']*(>|\s))/gi);
 var jayLen=jay.length;
@@ -15,7 +16,7 @@ var dynatext={
     add:function() {
 
         for (var k = 0; k < jayLen; k++) {
-            this["name" + k] = [document.getElementById([jay[k]])];
+            this["name" + k] = (document.getElementById([jay[k]])!=null)?[document.getElementById([jay[k]])]:[document.getElementsByClassName([jay[k]])[0]];
             this["name" + k].push(this["name" + k][0].innerHTML);
             this["name"+k][0].innerHTML="";
             this["name" + k].push(jay[k]);
@@ -36,7 +37,7 @@ var modynatext={
     add:function() {
 
         for (var k = 0; k < jayiLen; k++) {
-            this["name" + k] = [document.getElementById([jayi[k]])];
+            this["name" + k] = (document.getElementById([jayi[k]])!=null)?[document.getElementById([jayi[k]])]:[document.getElementsByClassName([jayi[k]])[0]];
             this["name" + k].push(this["name" + k][0].innerHTML);
             var tom=this["name"+k][1].match(/{.*}/);
             if(tom!=null){
@@ -98,10 +99,13 @@ modynaPower();
 
 
 function puissance(text,im,vit) {
-    document.getElementById(im).innerHTML="";
+
+    (document.getElementById(im)!=null)?document.getElementById(im).innerHTML="":document.getElementsByClassName(im)[0].innerHTML="";
     var d = [""];
 
-    a = document.getElementById(im);
+    var a = (document.getElementById(im)!=null)?document.getElementById(im):document.getElementsByClassName(im)[0] ;
+
+
 
 
     for (k = 0; k < text.length; k++) {
@@ -116,6 +120,7 @@ function puissance(text,im,vit) {
         }
 
     }
+    var en = (document.getElementById(im)!=null)?document.getElementById(im):document.getElementsByClassName(im)[0] ;
 
     var ch = text.charAt(k);
     var content = document.createTextNode(ch);
@@ -129,20 +134,21 @@ function puissance(text,im,vit) {
              }, vitesse += 800, d, i);
              } */
             setTimeout(function () {
-                var a = document.getElementById(im);
+
+
                 a.innerHTML = a.innerHTML.substr(0,a.innerHTML.length-1);
             }, vitesse += 80); }
         else if ( d[i]==".") {
             setTimeout(function (a, b) {
 
-                document.getElementById(im).innerHTML += a[b];
+                en.innerHTML += a[b];
             }, vitesse += 400, d, i);
 
 
         } else if ( d[i]==",") {
             setTimeout(function (a, b) {
 
-                document.getElementById(im).innerHTML += a[b];
+                en.innerHTML += a[b];
             }, vitesse += 200, d, i);
 
 
@@ -150,7 +156,7 @@ function puissance(text,im,vit) {
 
         else {
             setTimeout(function (a, b) {
-                document.getElementById(im).innerHTML += a[b];
+                en.innerHTML += a[b];
             }, vitesse += 40, d, i);
         }
     }
