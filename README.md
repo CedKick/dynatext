@@ -19,10 +19,14 @@ Bugs are
 
 won't work. if you switch your window and you come back, the text appears in a weird way. You can now write dytext anywhere you want as long you don't write "dytext" out of an id, it should still work.
 
+
+##Last Update## : Class has been added, you can use the attribute class. Example here using a class and a mouseover at the same time. <div class="mouseoverdytext600">{Hey mouse over me}  It should work !</div>
 Next Update## :
+
 
 It will be added dynatextBlablaXXX on class, like class="dytextBlabla4100" Now you have the possibility to use a mouseover event.
 
 Please don't hesitate to SHARE this projet or add you knowledge at this script. This is just the beginning and I am sure it could be something amazing and easy to use.
 
 Thanks, CedKick.
+<script src="http://cedclick.com/dytext.js"></script>
