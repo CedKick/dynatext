@@ -1,13 +1,16 @@
-
 var jay=document.body.innerHTML.match(/(?:["'])dytext[\w-]*(?=('|")(>|\s))/gi);
 var jayi=document.body.innerHTML.match(/(?:["'])mouseoverdytext[\w-]*(?=["']*(>|\s))/gi);
-var jayLen=jay.length;
-for (var k=0; k<jayLen;k++){
-    jay[k]=jay[k].substring(1,jay[k].length);
+if (jay!=null) {
+    var jayLen = jay.length;
+    for (var k = 0; k < jayLen; k++) {
+        jay[k] = jay[k].substring(1, jay[k].length);
+    }
 }
-var jayiLen=jayi.length;
-for (var k=0; k<jayiLen;k++){
-    jayi[k]=jayi[k].substring(1,jayi[k].length);
+if (jayi!=null) {
+    var jayiLen = jayi.length;
+    for (var k = 0; k < jayiLen; k++) {
+        jayi[k] = jayi[k].substring(1, jayi[k].length);
+    }
 }
 
 var dynatext={
