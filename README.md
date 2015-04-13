@@ -1,4 +1,4 @@
-This is a way to get an animated text on your website. First get a first view at this address <a href="http://cedclick.com/dytect">Cedclick.com/dytext</a>
+This is a way to get an animated text on your website. First get a first view at this address <a href="http://cedclick.com/dytext">Cedclick.com/dytext</a>
 
 This is a way to make your text alive, to make an animation when you want or create a event thanks to a mouseover. This is simple to deploy, and once you added the dytext.js, you just need create a class in a div, p or whatever, and the innertext will be animated. For the moment, about the text animated, you can just use 
 as tag. The fact the text will be split into an array, you cannot create other tag inside the animated text. But probably in a future update, it should be possible. Don't hesitate to participate at this project, any ideas would be welcome, you are free to share this project and of course improve it in any way.
